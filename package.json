@@ -1,0 +1,21 @@
+{
+  "author": "Eric Kilby <eric@stackdriver.com>",
+  "name": "stackdriver-statsd-backend",
+  "description": "A StatsD backend for Stackdriver",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Stackdriver/stackdriver-statsd-backend",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Stackdriver/stackdriver-statsd-backend.git"
+  },
+  "keywords": [
+    "stackdriver",
+    "statsd"
+  ],
+  "engines": {
+    "node": ">=0.4"
+  },
+  "main": "lib/stackdriver.js",
+  "dependencies": {},
+  "devDependencies": {}
+}
