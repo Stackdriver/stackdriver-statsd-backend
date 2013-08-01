@@ -24,8 +24,10 @@
   	"url": "https://github.com/Stackdriver/stackdriver-statsd-backend/issues",
   	"email": "support@stackdriver.com"
   },
-  "contributors": {
-  	"name": Eric Kilby,
-  	"email": "eric@stackdriver.com"
-  }
+  "contributors": [
+  	{
+  		"name": "Eric Kilby",
+  		"email": "eric@stackdriver.com"
+  	}
+  ]
 }
