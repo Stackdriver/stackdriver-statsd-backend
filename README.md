@@ -3,8 +3,6 @@ stackdriver-statsd-backend
 
 Backend plugin for statsd to publish output to the Stackdriver custom metrics API over HTTPS.
 
-## WORK IN PROGRESS CURRENTLY - WILL REMOVE THIS NOTE WHEN A WORKING VERSION IS CHECKED IN
-
 ### Installation
 
 This doesn't work yet!!!! 
