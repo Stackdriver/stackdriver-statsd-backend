@@ -18,5 +18,14 @@
   "author": "Stackdriver",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "e2c282484352621dff0fc565c1c5e821966f105e"
+  "gitHead": "e2c282484352621dff0fc565c1c5e821966f105e",
+  "homepage": "https://www.stackdriver.com",
+  "bugs": {
+  	"url": "https://github.com/Stackdriver/stackdriver-statsd-backend/issues",
+  	"email": "support@stackdriver.com"
+  },
+  "contributors": {
+  	"name": Eric Kilby,
+  	"email": "eric@stackdriver.com"
+  }
 }
