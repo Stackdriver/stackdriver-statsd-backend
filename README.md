@@ -17,7 +17,10 @@ be configurable like below.
 
 To set up the Stackdriver backend, you need a Stackdriver account and API key.  Everything else is optional.
 
+Please set flushInterval to 1 minute (60000 milliseconds) or more, as that is the highest frequency we support at this time (another good reason to use this statsd plugin).
+
 ```json
+flushInterval: 60000,
 backends: [ "./backends/stackdriver"], 
 stackdriver: {
     apiKey: "YOUR_API_KEY_HERE"
@@ -27,6 +30,7 @@ stackdriver: {
 To associate the metrics with a particular instance (such as the one statsd is running on) add the source parameter to your configuration.  The custom metrics generated will be associated with that AWS or Rackspace Cloud instance. For AWS, instance ID is in the form i-00000000.
 
 ```json
+flushInterval: 60000,
 backends: [ "./backends/stackdriver"], 
 stackdriver: {
     apiKey: "YOUR_API_KEY_HERE",
@@ -37,6 +41,7 @@ stackdriver: {
 To output additional logging information, add the debug parameter set to true.  It will be more verbose, and can be helpful to tell what exactly is being sent to Stackdriver.
 
 ```json
+flushInterval: 60000,
 backends: [ "./backends/stackdriver"], 
 stackdriver: {
     apiKey: "YOUR_API_KEY_HERE",
