@@ -1,21 +1,22 @@
 {
-  "author": "Eric Kilby <eric@stackdriver.com>",
   "name": "stackdriver-statsd-backend",
-  "description": "A StatsD backend for Stackdriver",
-  "version": "0.0.1",
-  "homepage": "https://github.com/Stackdriver/stackdriver-statsd-backend",
+  "version": "0.1.0",
+  "description": "Send metric data from statsd to Stackdriver",
+  "main": "lib/stackdriver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Stackdriver/stackdriver-statsd-backend.git"
+    "url": "git://github.com/Stackdriver/stackdriver-statsd-backend.git"
   },
   "keywords": [
     "stackdriver",
+    "metrics",
     "statsd"
   ],
-  "engines": {
-    "node": ">=0.4"
-  },
-  "main": "lib/stackdriver.js",
-  "dependencies": {},
-  "devDependencies": {}
+  "author": "Stackdriver",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "e2c282484352621dff0fc565c1c5e821966f105e"
 }
