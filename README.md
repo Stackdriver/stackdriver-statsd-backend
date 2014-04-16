@@ -23,7 +23,7 @@ Please set flushInterval to 1 minute (60000 milliseconds) or more, as that is th
 ```js
 {
     flushInterval: 60000,
-    backends: [ "stackdriver-statsd-backend"], 
+    backends: [ "stackdriver-statsd-backend" ], 
     stackdriver: {
         apiKey: "YOUR_API_KEY_HERE"
     }
@@ -35,10 +35,24 @@ To associate the metrics with a particular instance (such as the one statsd is r
 ```js
 {
     flushInterval: 60000,
-    backends: [ "stackdriver-statsd-backend"], 
+    backends: [ "stackdriver-statsd-backend" ], 
     stackdriver: {
         apiKey: "YOUR_API_KEY_HERE",
         source: "AWS Instance ID here"
+    }
+}
+```
+
+If you are sending to Stackdriver from an aggregated metrics source (for example into a statsd cluster) the instance can be inferred from a prefix on the metric name rather than a fixed value.  If your metric names look like "_instanceName_|_metricName_", you would use:
+
+```js
+{
+    flushInterval: 60000,
+    backends: [ "stackdriver-statsd-backend" ], 
+    stackdriver: {
+        apiKey: "YOUR_API_KEY_HERE",
+        sourceFromPrefix: true,
+        sourcePrefixSeparator: "|"
     }
 }
 ```
@@ -48,7 +62,7 @@ To output additional logging information, add the debug parameter set to true.  
 ```js
 {
     flushInterval: 60000,
-    backends: [ "stackdriver-statsd-backend"], 
+    backends: [ "stackdriver-statsd-backend" ], 
     stackdriver: {
         apiKey: "YOUR_API_KEY_HERE",
         debug: "true"
