@@ -30,7 +30,11 @@ Please set flushInterval to 1 minute (60000 milliseconds) or more, as that is th
 }
 ```
 
-To associate the metrics with a particular instance (such as the one statsd is running on) add the source parameter to your configuration.  The custom metrics generated will be associated with that AWS or Rackspace Cloud instance. For AWS, instance ID is in the form i-00000000.
+To associate the metrics with a particular instance (such as the one statsd is running on) add the source parameter to your configuration.  The custom metrics generated will be associated with that AWS, GCE or Rackspace Cloud instance. For AWS, instance ID is in the form i-00000000.
+
+If statsd is running locally on an AWS EC2 instance, and you wish to associate the metrics with that instance in Stackdriver, you can also set the source parameter to "detect-aws".  This will use the local EC2 metadata URL to determine the instance ID where it is running.
+
+If statsd is running locally on an Google Compute instance, and you wish to associate the metrics with that instance in Stackdriver, you can also set the source parameter to "detect-gce".  This will use the local GCE metadata URL to determine the instance ID where it is running. 
 
 ```js
 {
@@ -53,6 +57,20 @@ If you are sending to Stackdriver from an aggregated metrics source (for example
         apiKey: "YOUR_API_KEY_HERE",
         sourceFromPrefix: true,
         sourcePrefixSeparator: "|"
+    }
+}
+```
+
+To send percentiles with your timer values, use the percentThreshold key in your configuration to set the percentiles you want (statsd defaults to computing the 90th percentile only), and set the sendTimerPercentiles key in the Stackdriver backend config to enable sending them.
+
+```js
+{
+    flushInterval: 60000,
+    percentThreshold: [95, 99],
+    backends: [ "stackdriver-statsd-backend" ], 
+    stackdriver: {
+        apiKey: "YOUR_API_KEY_HERE",
+        sendTimerPercentiles: true
     }
 }
 ```
