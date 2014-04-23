@@ -47,7 +47,9 @@ If statsd is running locally on an Google Compute instance, and you wish to asso
 }
 ```
 
-If you are sending to Stackdriver from an aggregated metrics source (for example into a statsd cluster) the instance can be inferred from a prefix on the metric name rather than a fixed value.  If your metric names look like "_instanceName_|_metricName_", you would use:
+If you are sending to Stackdriver from an aggregated metrics source (for example into a statsd cluster) the instance can be inferred from a prefix on the metric name rather than a fixed value.  If your metric names look like "_instanceId_--_metricName_", you would use:
+
+Note that statsd is very restrictive on which characters are allowed in metric names so we've had to default to -- as the separator (Their regex is .replace(/[^a-zA-Z_\-0-9\.]/g, '')).
 
 ```js
 {
@@ -56,7 +58,7 @@ If you are sending to Stackdriver from an aggregated metrics source (for example
     stackdriver: {
         apiKey: "YOUR_API_KEY_HERE",
         sourceFromPrefix: true,
-        sourcePrefixSeparator: "|"
+        sourcePrefixSeparator: "--"
     }
 }
 ```
