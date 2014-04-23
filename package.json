@@ -1,6 +1,6 @@
 {
   "name": "stackdriver-statsd-backend",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Send metric data from statsd to Stackdriver",
   "main": "lib/stackdriver.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "Stackdriver",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "8cfc394726df2d4a24a0e8bbf4ce7edb2ec977ef",
+  "gitHead": "c1c2885cebd0b874abb6133c59dfec6ca05f2930",
   "homepage": "https://www.stackdriver.com",
   "bugs": {
   	"url": "https://github.com/Stackdriver/stackdriver-statsd-backend/issues",
