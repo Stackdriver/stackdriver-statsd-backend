@@ -1,6 +1,6 @@
 {
   "name": "stackdriver-statsd-backend",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Send metric data from statsd to Stackdriver",
   "main": "lib/stackdriver.js",
   "scripts": {
