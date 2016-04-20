@@ -1,7 +1,7 @@
 stackdriver-statsd-backend
 ==========================
 
-Backend plugin for [statsd](https://github.com/etsy/statsd) to publish output to the [Stackdriver](http://www.stackdriver.com) custom metrics API over HTTPS.
+Backend plugin for [statsd](https://github.com/etsy/statsd) to publish output to the [Stackdriver](http://www.stackdriver.com) custom metrics API over HTTPS.  Note that this plugin does not work with [Google Stackdriver](https://cloud.google.com/stackdriver) at this time.
 
 ### Installation
 
